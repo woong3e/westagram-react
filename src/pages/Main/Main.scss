@@ -1,24 +1,21 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
 nav {
   display: flex;
-  width: 100%;
-  height: 100px;
+  @include widthHeight(100%, 100px);
+  .nav-width {
+    width: 33%;
+  }
 }
 .horizontal-line {
-  width: 100%;
-  height: 50px;
+  @include widthHeight(100%, 50px);
   border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
-.nav-width {
-  width: 33%;
-}
 .logo-wrap {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  @include flexSort(start, center);
 }
 .logo-wrap__logo {
-  width: 30px;
-  height: 30px;
+  @include widthHeight(30px, 30px);
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -37,22 +34,20 @@ nav {
 .search-bar-wrap {
   display: flex;
   flex-direction: column;
-}
-.search-bar-wrap input {
-  border-radius: 5px;
-  width: 100%;
-  height: 40px;
-  margin-top: 30px;
+  input {
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+  }
 }
 .searchPopUp {
   width: 100%;
   height: 500px;
 }
 .div-outer {
-  display: flex;
+  @include flexSort(left, center);
   flex-direction: row;
-  justify-content: left;
-  align-items: center;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   background-color: whitesmoke;
@@ -62,13 +57,11 @@ nav {
   border-top: none;
 }
 .profile-img-div {
-  width: 40px;
-  height: 50px;
+  @include widthHeight(40px, 50px);
   margin-right: 20px;
 }
 .profile-img-div img {
-  width: 40px;
-  height: 40px;
+  @include widthHeight(40px, 40px);
   border-radius: 50%;
   margin-top: 5px;
 }
@@ -77,9 +70,7 @@ nav {
 }
 
 .icons-wrap {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flexSort(flex-end, center);
 }
 .icons-wrap img {
   width: 30px;
@@ -123,12 +114,10 @@ main {
 .fa-solid {
   font-size: 30px;
 }
-
 .feeds__img {
   width: 100%;
   height: 60%;
 }
-
 .feeds__bottom-icons {
   display: flex;
   flex-direction: row;
@@ -147,8 +136,7 @@ i.fa-heart {
 .feeds__comment__input {
   font-size: 14px;
   border: 0px;
-  width: 100%;
-  height: 30px;
+  @include widthHeight(100%, 30px);
   padding: 0 30px;
 }
 .feeds__comment-delete {
@@ -158,10 +146,9 @@ i.fa-heart {
   background: none;
   cursor: pointer;
 }
-/* aside 시작 */
+
 aside.main-aside {
-  width: 40%;
-  height: 100%;
+  @include widthHeight(40%, 100%);
   margin-left: 30px;
 }
 .main-aside__header-wrap {
@@ -187,8 +174,7 @@ aside.main-aside {
   opacity: 0.5;
 }
 .main-aside__story-section {
-  width: 100%;
-  height: 30%;
+  @include widthHeight(100%, 30%);
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   padding: 10px 20px 0px 20px;
@@ -206,6 +192,7 @@ aside.main-aside {
   font-size: 13px;
   font-weight: bold;
 }
+
 /* ul,li reset */
 ul,
 li {
@@ -216,10 +203,12 @@ li {
   vertical-align: baseline;
   list-style: none;
 }
-.main-aside__story-section__profile-list li {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
+.main-aside__story-section__profile-list {
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
 }
 .main-aside__story-section__profile-list__text {
   display: flex;
@@ -265,23 +254,18 @@ li {
 }
 
 .menu-box-div {
-  width: 500px;
-  height: 500px;
+  @include widthHeight(500px, 500px);
   background-color: whitesmoke;
 }
 .profile-div {
-  width: 100px;
-  height: 100px;
+  @include widthHeight(100px, 100px);
 }
 .save-div {
-  width: 100px;
-  height: 100px;
+  @include widthHeight(100px, 100px);
 }
 .setting-div {
-  width: 100px;
-  height: 100px;
+  @include widthHeight(100px, 100px);
 }
 .logout-div {
-  width: 100px;
-  height: 100px;
+  @include widthHeight(100px, 100px);
 }

@@ -1,5 +1,5 @@
-import "./Main.css";
-import "../../styles/common.css";
+import "./Main.scss";
+import "../../styles/common.scss";
 
 const Main = () => {
   return (

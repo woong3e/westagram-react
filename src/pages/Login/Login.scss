@@ -1,3 +1,6 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
 .container {
   border: 1px solid;
   height: 100vh;
@@ -11,10 +14,8 @@ h1 {
   margin-bottom: 150px;
 }
 .login {
-  display: flex;
+  @include flexSort(center, center);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 input#loginPwInput,
 #loginIdInput {
@@ -39,9 +40,11 @@ div #loginIdInput,
   text-align: center;
 }
 
-a#loginForget {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 240px;
+.loginLink {
+  a {
+    @include flexSort(center, center);
+    flex-direction: column;
+    text-align: center;
+    margin-top: 120px;
+  }
 }
